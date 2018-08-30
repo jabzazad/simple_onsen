@@ -34,7 +34,7 @@
     <ons-tabbar swipeable position="auto">
       <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" badge="7" active>
       </ons-tab>
-      <ons-tab page="tab2.html" label="Cart" icon="md-settings" active-icon="md-face">
+      <ons-tab page="tab2.html" label="Cart" icon="fa-shopping-cart" active-icon="fa-shopping-cart">
       </ons-tab>
     </ons-tabbar>
   </ons-page>
@@ -57,37 +57,49 @@
       </ons-carousel>
       &nbsp;
       <ons-row>
-        <ons-col style="background-color: red;">
-          <ons-icon icon="md-face"></ons-icon>Beauty</ons-col>
-        <ons-col style="background-color: green;">
-          <ons-icon icon="md-bike"></ons-icon>Sport</ons-col>
-        <ons-col style="background-color: blue;">
-          <ons-icon icon="fa-twitter"></ons-icon>Test</ons-col>
-      </ons-row>
-      &nbsp;
-      <ons-row>
-        <ons-col>
-          <ons-icon icon="md-face" style="background-color: red;">Beauty</ons-icon>
+        <ons-col style="background-color: #dd6218;opacity:1.0">
+            <div class="user_thumbnail"><ons-icon icon="md-face"></ons-icon></div>
+            <div class="username" id="user_2_name">Beauty</div>
         </ons-col>
-        <ons-col>
-          <ons-icon icon="md-bike" style="background-color: green;">Sport</ons-icon>
+        <ons-col  style="background-color: #51ed8b;opacity:1.0">
+            <div class="user_thumbnail"><ons-icon icon="md-bike"></ons-icon></div>
+            <div class="username" id="user_2_name">Sport</div>
         </ons-col>
-        <ons-col>
-          <ons-icon icon="fa-twitter" style="background-color: blue;"></ons-icon>
+        <ons-col style="background-color: #c5245b;opacity:1.0">
+            <div class="user_thumbnail"><ons-icon icon="md-lock"></ons-icon></div>
+            <div class="username" id="user_2_name">Security</div>
         </ons-col>
       </ons-row>
       &nbsp;
       <ons-row>
-        <ons-col>
-          <ons-icon icon="md-face" style="background-color: red;">Beauty</ons-icon>
-        </ons-col>
-        <ons-col>
-          <ons-icon icon="md-bike" style="background-color: green;">Sport</ons-icon>
-        </ons-col>
-        <ons-col>
-          <ons-icon icon="fa-twitter" style="background-color: blue;"></ons-icon>
-        </ons-col>
-      </ons-row>
+          <ons-col style="background-color: #dd6218;opacity:0.75">
+              <div class="user_thumbnail"><ons-icon icon="fa-camera-retro"></ons-icon></div>
+              <div class="username" id="user_2_name">Camera</div>
+          </ons-col>
+          <ons-col  style="background-color: #51ed8b;opacity:0.75">
+              <div class="user_thumbnail"><ons-icon icon="fa-desktop"></ons-icon></div>
+              <div class="username" id="user_2_name">Computer</div>
+          </ons-col>
+          <ons-col style="background-color: #c5245b;opacity:0.75">
+              <div class="user_thumbnail"><ons-icon icon="md-smartphone"></ons-icon></div>
+              <div class="username" id="user_2_name">Smartphone</div>
+          </ons-col>
+        </ons-row>
+        &nbsp;
+        <ons-row>
+            <ons-col style="background-color: #dd6218;opacity:0.65">
+                <div class="user_thumbnail"><ons-icon icon="fa-fighter-jet"></ons-icon></div>
+                <div class="username" id="user_2_name">Toy</div>
+            </ons-col>
+            <ons-col  style="background-color: #51ed8b;opacity:0.65">
+                <div class="user_thumbnail"><ons-icon icon="fa-wrench"></ons-icon></div>
+                <div class="username" id="user_2_name">Hardware</div>
+            </ons-col>
+            <ons-col style="background-color: #c5245b;opacity:0.65">
+                <div class="user_thumbnail"><ons-icon icon="fa-mobile"></ons-icon></div>
+                <div class="username" id="user_2_name">application</div>
+            </ons-col>
+          </ons-row>
     </ons-page>
   </template>
 
@@ -105,7 +117,7 @@
               <span class="list-item__subtitle" style="color:blue">฿5,000.00</span>
             </div>
             <div class="right">
-              <ons-icon icon="md-bin" class="list-item__icon"></ons-icon>
+              <ons-icon icon="fa-trash" class="list-item__icon"></ons-icon>
             </div>
           </ons-list-item>
           <ons-list-item>
@@ -117,15 +129,40 @@
                   <span class="list-item__subtitle" style="color:blue">฿1,570.00</span>
                 </div>
                 <div class="right">
-                  <ons-icon icon="md-bin" class="list-item__icon"></ons-icon>
+                  <ons-icon icon="fa-trash" class="list-item__icon"></ons-icon>
                 </div>
           </ons-list-item>
+          <ons-list-item>
+              <div class="left">
+                  <img src="img/item3.jpg" height="50" width="50">
+                </div>
+                <div class="center">
+                  <span>NIKE AIR MAX 90 งานเหมือน</span>
+                  <span class="list-item__subtitle" style="color:blue">฿570.00</span>
+                </div>
+                <div class="right">
+                  <ons-icon icon="fa-trash" class="list-item__icon"></ons-icon>
+                </div>
+          </ons-list-item>
+          &nbsp;
         </ons-list>
-   
+        <ons-button modifier="large">PROCEED TO PAY</ons-button>
     </ons-page>
   </template>
 </body>
-<style>
-</style>
+<style type="text/css">
+      .user_thumbnail {
+        width: 100px;
+        height: 100px;
+        display: table;
+        text-align: center;
+        margin: auto;
+      }
 
+      .user_thumbnail ons-icon {
+        font-size: 70px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+</style>
 </html>
